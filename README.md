@@ -2,17 +2,19 @@
 
 **Algorithmic Token · ENTER Invest**
 
-Experimental Python prototype accompanying the Strategy Lab #1 article published at [Algorithmic Token on Substack](https://algorithmictoken.substack.com).
+> **Primary academic source:**
+> Devanathan, Rueter, Boyd, Candès, Hastie, Kochenderfer, Apoorv, Soronow, Zamkovsky (2026)
+> *Single-Asset Adaptive Leveraged Volatility Control*
+> BlackRock AI Lab & BlackRock Index Services
+> [arXiv:2603.01298](https://arxiv.org/abs/2603.01298) · q-fin.PM · March 2026
+
+Experimental Python prototype accompanying the Strategy Lab #1 article published at [Algorithmic Token on Substack](https://algorithmictoken.substack.com/p/momentum-with-volatility-targeting).
 
 ---
 
 ## What This Is
 
-This module implements time-series momentum combined with a **proportional-control volatility targeting mechanism**, based on the following paper:
-
-> Devanathan, Rueter, Boyd, Candès, Hastie, Kochenderfer, Apoorv, Soronow, Zamkovsky (2026)
-> *Single-Asset Adaptive Leveraged Volatility Control*
-> BlackRock AI Lab · [arXiv:2603.01298](https://arxiv.org/abs/2603.01298)
+This module implements time-series momentum combined with a **proportional-control volatility targeting mechanism**, based on the primary academic source above.
 
 The standard open-loop volatility targeting approach — scaling position size as `target_vol / realized_vol` — has three well-documented failure modes: high turnover, leverage spikes during regime transitions, and no mechanism to correct persistent tracking error. The proportional controller in this implementation addresses all three by adding a feedback correction term that closes the gap between realized and target volatility.
 
@@ -122,12 +124,6 @@ python strategy_lab_01.py
 
 ---
 
-## Reference
-
-Devanathan N., Rueter D., Boyd S., Candès E., Hastie T., Kochenderfer M., Apoorv A., Soronow D., Zamkovsky I. (2026). *Single-Asset Adaptive Leveraged Volatility Control.* BlackRock AI Lab. arXiv:2603.01298.
-
----
-
 ## Risk Disclosure
 
 This code is experimental and provided for educational and research purposes only. Past performance of any modelled strategy is not indicative of future results. All algorithmic trading carries significant financial risk, including the potential total loss of capital. Nothing here constitutes financial advice. ENTER Invest does not manage client funds based on strategies described here unless explicitly contracted to do so.
@@ -135,3 +131,4 @@ This code is experimental and provided for educational and research purposes onl
 ---
 
 *Algorithmic Token is published by ENTER Invest. [algorithmictoken.substack.com](https://algorithmictoken.substack.com)*
+
